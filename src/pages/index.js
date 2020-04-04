@@ -1,21 +1,27 @@
 import React from "react"
-import { Link } from "gatsby"
 
-import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
+import styles from './index.module.css';
+import { Classnames } from '../utils/ClassNameUtils';
 
 const IndexPage = () => (
-  <Layout>
+  <>
     <SEO title="Home" />
-    <h1>Hi Andracska</h1>
-    <p>Welcomes to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
+    <main className={styles.mainWrapper}>
+      <section className={Classnames(styles.blogTile, styles.tile)}>
+        <div className={Classnames(styles.blogBackground, styles.tileBackground)} />
+        <span className={Classnames(styles.tileTitle, styles.blogTitle)}>Blog</span>
+      </section>
+      <section className={Classnames(styles.portfolioTile, styles.tile)}>
+        <div className={Classnames(styles.portfolioBackground, styles.tileBackground)} />
+        <span className={Classnames(styles.tileTitle, styles.portfolioTitle)}>Portfolio/Work</span>
+      </section>
+      <section className={Classnames(styles.aboutTile, styles.tile)}>
+        <div className={Classnames(styles.aboutBackground, styles.tileBackground)} />
+        <span className={Classnames(styles.tileTitle, styles.aboutTitle)}>About me</span>
+      </section>
+    </main>
+  </>
 )
 
 export default IndexPage
