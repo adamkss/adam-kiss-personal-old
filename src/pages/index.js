@@ -7,6 +7,11 @@ import { Classnames } from '../utils/ClassNameUtils';
 const IndexPage = () => (
   <>
     <SEO title="Home" />
+    <header className={Classnames(styles.header)}>
+      <span className={Classnames(styles.headerTitle, styles.selectable, styles.selected)}>
+        ADAM KISS
+      </span>
+    </header>
     <main className={styles.mainWrapper}>
       <section className={Classnames(styles.blogTile, styles.tile)}>
         <div className={Classnames(styles.blogBackground, styles.tileBackground)} />
